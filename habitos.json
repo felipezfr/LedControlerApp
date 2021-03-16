@@ -1,0 +1,43 @@
+[
+    {
+        "id" : "0",
+        "nome": "Correr",
+        "descricao": "Corrida"
+    },
+    {
+        "id" : "1",
+        "nome": "Musculação",
+        "descricao": "Academia"
+    },
+    {
+        "id" : "2",
+        "nome": "Caminhar",
+        "descricao": "Caminhada"
+    },
+    {
+        "id" : "3",
+        "nome": "Fast Food",
+        "descricao": "Comer porcaria"
+    },
+    {
+        "id" : "4",
+        "nome": "Junk Food",
+        "descricao": "Comer cmomida menos saudável"
+    },
+    {
+        "id" : "5",
+        "nome": "Futebol",
+        "descricao": "Jogar futebol"
+    },
+    {
+        "id" : "6",
+        "nome": "Seriado",
+        "descricao": "Assistir Netflix"
+    },
+    {
+        "id" : "7",
+        "nome": "Video Game",
+        "descricao": "Jogar Video Game"
+    }
+    
+]

@@ -1,21 +1,50 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import HabitosPage from './src/pages/HabitosPage';
+import LoginPage from './src/pages/LoginPage';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const appNavigator = createStackNavigator(
+  {
+    'Login': {
+      screen: LoginPage,
+      navigationOptions:{
+        headerShown: false,
+      }
+    },
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    'Habitos': {
+      screen: HabitosPage,
+      navigationOptions: {
+        title: 'Hábitos',
+        headerTitleStyle: {
+          textAlign: 'left',
+          fontSize: 20,
+        }
+      }
+    }
   },
-});
+  {
+    defaultNavigationOptions: {
+      title: 'MyHabitTimeLine',
+      headerTintColor: 'white',
+      headerStyle: {
+        backgroundColor: '#6542f4',
+        borderBottomColor: '#f4f2ff',
+      },
+      headerTitleStyle: {
+        color: 'white',
+        fontSize: 20,
+        flexGrow: 1,
+        textAlign: 'center',
+      }
+    }
+  }
+);
+
+const AppContainer = createAppContainer(appNavigator);
+
+export default AppContainer;
+
+
+
+
